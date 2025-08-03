@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uniglobe SS College - Login Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="login.css">  
+</head>
+<body>
+  <div class="login-container">
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+      <h2>Welcome to Uniglobe MIS Portal</h2>
+      <p>
+        Please enter your credentials 
+      </p>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABcVBMVEX///8hQoX87R6NxUAhQoQhQoeNxUH///0eQIRBanGRyzz87AAcP4b/7xyQyT0aPoMANH4ROYEcPYf/8xkAMn0ANn6KwUb/9BQZOoiExEAALnzp7fEAMoCTorynssb+/vn07CCCwSfy9vYAKXmHwzTd4+gvUIdCXJGBka9YbpvL095Qe2xHYZTT2+KEu0nCy9j48FH8+cZ7sU45YXX897cAM4dsn1mezDrBwUH2+O7X6b/r9uK925Wr03ijzmmczGDO5LLh7s612Yppfalyhq6NmrlZb5iir8TG4qYtSoaezWO72ZDh8cuov60xWnYAHXQtVHwnTX5lfKBeimVkkmBwo1VWgWiW0DNKc3D6+tr59qBuoFX6+cD69qj684b58Fj68nRVamjCxHwAKopRZHJpemiMlF+xtE7m3Sqt0DetwD6ZnVjYzzy/2DLS3iq7uUN8h2ShqFJ3g2aOlVtZaXEAHorh5STN3THa1S9bcWqYpaFdWLHMAAAQQ0lEQVR4nO1d6V/a2BoOJiERshMwrFJkEYvSYqO1tnfacRvu4uDWa6fr3HZandZ27PRq5/7195wQIMsJiw0J9Zfnw3QkCufJu7/nzQHDAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAnx/WPN7AePG2rrfKxgvKOzerN9rGC+o9Xt+L2HcuH/NRYit3weKeo1BYQ+uuZ/B1v/m9wrGjQfX3c+sF2evtRUCR/rA7xWMGWv4dVfSe8XrnpP+cN2VdP3GQ7+XMGbcL17zcD+bSPi9hDHj0Y0f/V7CmPHjjWseK2YTN655rHhUDF+hcPqekrz7xYFmWKrnsvMb1WqtVqlVNza3cvXFghdLcwdUovjQ+WphMbdZTqVkIS7yXYhxWZ7jt7P19HchyfUbyGgI1k4t7mwTclxkQkjQoiBX5utpbNJV9mERnZQuzpfjcYZGszOwDFVzE62xFPa34g/WlzAsnW0K4gB2OgheEDcWsIkVJDVbtDma2YVNOc4PRU+XJC+XdyZVkNSjYvEn488YVq/KIjECvzZJgcimJ1OOPxWLpoymXoszI/ODIEViayLl+KDYdaUUhZWqqavx0+QoCjvUxIlxNoHjXVdamBf4K/MDIAi5UveTDQrrOJ5Y0297vSnQIXIYYTlf4jObE6aq94r437XojhX2BYfQbgHJlPvFEbFZnyiPc79YbPdoFohhHSgpLAr9KDKpTZ9JGUBRwNH8A97yrDycggLwVaza95dJoVbym1kHFHA0MBwCDXWSiuV1Mi7P5bCdOVns94s8MTEOZ62Ig3CYLtvW2yFEECaKdLkjnUWLMdIho5LTqeyE2OKjG3jxn4uEY4ygK1kzeTqTg39H7aQswhVypjchMvN+c2vjYRGP/CvknIOK82mr+s5BBczNWV4mQlTV/DbC/kQI8X4R53YlB3qEkPp5AavMpUxL50tYGiuZCg9QFAubWC4F/jX+dXUSosYDDudaThVueUHL5ECqY1BA4Em3fs5iFQMXurqxUV3ACvAf4w0Sq37TA/gBx/E9p0DP8DlIMb0tGF/cr8ZpobppYMhX0/rbUfNG0RJAUf0WIlXE8XDTMbTRc7CyrVl8Dbwh5tqf5zX3A/yrxScLvsf+tRuAIe2YoNBxrLCIZYVBqQARSsFbkeZtLstvj1pYjoDE27kXI86XKnPZkjAwnSOJAgYS7qqNIZHK+ciPoqrTkKGTK4UGJvFEptocyJDfAIXJDraDuBfigo8Us6mbkKFTPgOgVcM8MZBhPLcV54WNOm3/TbrpXzVVTykHXH+Gw4JswvgoEah7IVb98qcFOqQcfgNDk7z0H3ovGS7KWZ8Y7oshZeXqDPla3zI42+yxjy/6QI/CckKIVI6uzJAg6oQzRVJOG1ICvuZH4E83QQ2rMxyut20EzYCMrCry6JpEjMs1bOFnQeiQjPuhp/NQckoDJG2JPrJwQLNardaxOvgvgiHdzOZyIETs5HJVPRDRovc1/6IMP1lZwvtmbU6gt6h22bCFujl0p4eR67Y6eO9z8BpDdhg6Z97ODOM1mGuna+hsh5FzsHe3He9eJWWv435dhgRJJQEIOlZPfUBkdsC77MgOqYC4Ba4WDNpPAGfjKUGqon04mQEMw/jy6AxDqXQhV0inHK7Ki1R2Ads0OmnB29ZUXbNCnSE3PTpDvlqqyOWSPdPWQDfTNVnI6p+i/0XNy3qf0gt0XUtvOqfejqiIPEGLFYerZRiAxKbptZSXQqx3tEuFDCOPr8CwXVM69lgRV4EQvUNHuTQtxbkDZXSG/ekzBkh6+UnKi57paSlFdhjCaMGtuMuQJJanTdjTPo4U9z3ip6cz2ofCeBjmjpSRQ34/0OVExIh/H7c9GS0MUyhSbqSwza6BwKwtjC9J37IragPTCuNGdH11fJiGxuyTbydY7/YGSS0vxZdGT9v6MoTNHwMinXg7hK+hsF9cGCI0BGKttsDDrdGLiz6QbnJmGe524u0Q+ffz59/ujgo9JQ0pT+FiuKskNc5QDswy7GWFg4uo27e+lR7WzWfat3uFu2rI78PwqVmGeJfhgAqDwm5HXbDCnieFiznUGB66ylBqmAkm9jpmTsfTfZd2O/qLCwT1pFtn+BgqFHfkJkO6mTDL0ODI+qffz6K33JjGScsGxykdayazNHqV7wymZTZDvEF0P1Hs1+N/HmXd0FFDrAh1HTs3eg3sDOnYYoaNXrily47rol5Eo3fcIGgyQ3i/QXQOR65QPzmibdsGV2pMClMFBy1cexmNvnKFIFYzlnQkockwcqC4l9W0Y6yB4aGBoYw0ROBE89HoLZeetI6bTE5KaKtwMTMlFbOO4pyxOIvvoNY0+yLKslOuGCGoKwTTenTPnhi4Qzg0mJbFDLljA0MRtWN6+1Z0asqVSAhh6ix0VSqy5xZBkLNZXCm+azByvmJZD4WtvYqygOBtlwhiO3HzetpuIeJeVqNthZgDvoEh3bR4mrXnU0CAU9FnrlXH8+ZNCv2Ou1gES0sWES4Z/TRNG7IaEN7vQAUFBN2JExo2zN0xaVm749wS75Ih0rtWR3NkvHk0b9iGou7koYK6KkEQLMzZC7mnr2PXpYgoPbY6mkOTegjt3jcgtP7LVJsfO+WaDUJUzAwZQlOqcORAckeI4pGVodnEQWYKxbV251VU008gwPwTNztUhbKlh6sctV1fw52YT5cTVi01agfNwN2AJ89f6uKDBF+6+2Rg2tylDRHSQfueu1PnE3oqbwS0cJKmGUnJZMTmr/95BdKXDr0pNvqCcnf4LW2VVCdPdqkKNsWKMECy8VpVM3S59ea3t+8+nMzEeuw0DX3mIjmdocXcmFbX5bmhpkxbSZMAOL66unp69vv7d3c/fD3Jx2ZiMdbIDhJ85f6zqzaGIVGPX65UUMx0BIiNOz37eJHP54ESAsQgMws1XYC3x9AET9sW1dGryGMXGKpPudXLPOSFomQCq3UsxsDQVs13A1hD/UZ6JKO2zvKDubX5vXQr07bA2ErU17WrM7zKVrDpjdTWu/xQ9MbiYbqwMQwpegSLHH5Lbkoq4vlUbEh+0Rez45uPrtgZdhx8ws5+aNCZ305mhuPHRl+N9RAO+750t6C7ekgkpean2HAKCviNyQA72LcZG7PXMcTGoMeaHUCrv50Mp6CxmbuPxsvPVh9qAuj0qCPTzBXSb0KKvxtKgGws/25X7d/1dgE5wbbETmoKhDh6Q4oIKbtfB1sgG5vJf3hLqFJz3ASxBTtDphMv8MjyyGpKqG8HhQiQ1syc3P2jlQH3z4NxhZJsWyTJN7pCHDXqM6/P+2koSNlmZk4+vX0DpMfAoVpkr81lxO1i6nWpI9OjuVNGvOuooTBzO/n0/i9CzUjd8lrwYHK/Zh9jYnq9lQY/ip6S/F0HH8qy+YvL06PXqiKZnsUc/wAfhW0hJoKV7o4fd3OExIZWPyEJsixgxyWTiO2QOad9CxdRt88TEob2UWLwkwddqOcoFWXzl6vhJCh+8SXbW9HWhvA4UMjYKZBEl2FkRR2OIhFS/0AQZC/OwkldHw5twUebyhw7EIZo3C+KLA/nbEjmC0p+p8neMI29Q4neenIbKEM0jsAsDZfYMM0TW5hgL/Fkr03TsJk0zXjy+MyCPSKC9famC4bs8Ks2N8rmVw38cO7YJkJ+wwuCWAF1IIJxyoc7lkhSkiRFURUACaW1hGIzQvajedhryZ4BexENIeYRhkg2exsqycSe0Pry+e37c4D3bz9/KauqtSPOtKy5GnuZNBGMPLarAj32tBuCQqWmcJCJgzv64WRy9ezjyQnMtzpgp76++xxXjaJkMlYdZc/MBPGwravn4SMJ1s6+JkQiAUIYd/oxj2qUgcrg0xuBITuBRPk8iCBqLNcrJcWwbNz24ZoQVz/26ZSxsU+7nVDKEBY/CgiajRBPlO19Ld6zBxHTc9agThCMOn0x1b8MiuX/VLUnLkn13CxC9qOVYOTAXmqK895N6+9b1ZRR9oZotLAzdzPQD0stC8ELi4qin6WSPXz2yRISSUb5Mz9Uo2Xma0uyh8I8ZyUIHKndz3g35g2wbTISdffDkJ3AKfbkV1X6YjHCU5sIlxBJg7zg5XNBhuE2klH/GE6AbTrs2//eNTG0BkLoSO2FNMl7+jQwRVU7QiQk8d3MkL34NmY+mH++sPILm4cT2qCFBW9PAelYIiHtWTSU7cLJtVpeXrW7GcQOCL/tJT2Ibb5NcNfQy4Utv4vLs1MNZ5cX+anBu2RARy2BAucQ+VpozvOHndMpAm6nvOmml4De1/e709rWdBvJMAcyuAHbZXmrANFdVy96bFZkM2RI+auz0Fjs5Lz1WmFU43BouJ2nXvZpiLKnVgniuD2bIWnCh3MVChUeEGyP7MxMffpLVBjNszaswS2c5M4cTdIe602jiB14l5EasaD+qgmHnTn5swXKIy2TI5gWEJyN4+qFA8VVmxGuICYeRM/dTBv/g5JhY1//yigGvVKOObvihZOXSIq2UMg1UEPxvCd1oQUU9QRKMPb1s2rWKlI5sCVhAMmzYdwMl0BMdPh1RM3aLRjwznmbZyf5pxG7FPHkqb3xZCsKcUSjjvDrJKWX0anoybKK0CmSb9hGt6Ci2ijmraGQO0YECr7iz/k0L6JwoGVTQB3wyNBLaEW1ZtxWHb2pkFY3QzKEP4dE3olqE0lUFXWuCUmX0RRN7oa1WiEsmWx+lIz7c0Tkk87Qo20aU7/xZVtY1Cgag4bVCjlETRgK+eRlZm9FX+j/m24iKdIEimIYzztb4U0FMXGU8eV4IQp7ZZgcLyEphhhxhbOFfjy8arBCU4M7uYySoOzJTowdz0xzx4sEatqLZKQDhBB73iZvIBjmGi0JsS3n13F0a7fMU50l+0l5ELQyHbZHjbBuiiYrjKw0Ua3/lD8EKez5rKXaBoqK3G6Smkc2imEub01nuMQxIqySpODTEV8U4pH+dE1EUiSV4yUrx7ae9pozHLeyh9qsYtAPcfmFwnYGxTBESM2DsMWpaiEj30nPIw2kiwEEJ+ao5DaoLRk9hEEqe4eaOXb9KvSn7MckfIGLNKaRm28hsezHEW39UacdBmhJhX/c4LieJEFqw64C6UUSK7sqkh+R2Z+wk+cx6IBKNYF0OIZcUnYPGgkuovPk8hfF8NLKcRMV44GL4cWJMsEeqKzgeCY0oyh7yzcPjxoQR7+fH7cIxWm/X65NnoZ2UKo4n8VKkvCxF0liGEbkQ5L5fHKDgvLaKWB+nx7sjByBmHszAV4mHX+HFzb86FgMDXDn0/OZq3+HB52pTNYXP6BR2k9d4ahIKL9MMzfx7NpIb/LOPsdJfEx88r5/xQlQV7PlzCgc4Xda1dvnt383KNT348Jww6Y0n6pkJ+YbO0ZBIVeNy2Lfg6AJmhfk5tbi9yQ7Mwr1+Rr88jyUMHlGFMTydu67lF4bepmVXshu1poZ+AWIHcQFOcVUtufrJZh+Tt53WF0FhfRiPZfNzkNsZXdygNvk5dYBAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECCAB/g/jULVuZl9gQkAAAAASUVORK5CYII=" alt="Uniglobe Logo">
+        <h1>Uniglobe SS College</h1>
+      </div>
+      <p>Management Information System</p>
+    </div>
+
+    <!-- Login Tabs -->
+    <div class="login-tabs">
+      <button class="tab-btn active" onclick="showPanel('admin')">
+        <i class="fas fa-user-shield"></i>
+        Admin Panel
+      </button>
+      <button class="tab-btn" onclick="showPanel('teacher')">
+        <i class="fas fa-chalkboard-teacher"></i>
+        Teacher Panel
+      </button>
+      <button class="tab-btn" onclick="showPanel('parent')">
+        <i class="fas fa-users"></i>
+        Parent Panel
+      </button>
+      <button class="tab-btn" onclick="showPanel('student')">
+        <i class="fas fa-user-graduate"></i>
+        Student Panel
+      </button>
+    </div>
+
+    <!-- Login Content -->
+    <div class="login-content">
+      <!-- Admin Panel -->
+      <div id="admin" class="panel active">
+        <h2>Admin Panel Login</h2>
+        <p class="panel-description">Access administrative functions and system management</p>
+        <form onsubmit="handleLogin(event, 'admin')">
+          <div class="form-group">
+            <label for="admin-username">Username</label>
+            <input type="text" id="admin-username" placeholder="Enter admin username" required>
+          </div>
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Sign In
+          </button>
+        </form>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Teacher Panel -->
+      <div id="teacher" class="panel">
+        <h2>Teacher Panel Login</h2>
+        <p class="panel-description">Access teaching resources and student management</p>
+        <form onsubmit="handleLogin(event, 'teacher')">
+          <div class="form-group">
+            <label for="teacher-username">Teacher ID</label>
+            <input type="text" id="teacher-username" placeholder="Enter teacher ID" required>
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password</label>
+            <input type="password" id="teacher-password" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Sign In
+          </button>
+        </form>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Parent Panel -->
+      <div id="parent" class="panel">
+        <h2>Parent Panel Login</h2>
+        <p class="panel-description">Monitor your child's academic progress and activities</p>
+        <form onsubmit="handleLogin(event, 'parent')">
+          <div class="form-group">
+            <label for="parent-username">Parent ID</label>
+            <input type="text" id="parent-username" placeholder="Enter parent ID" required>
+          </div>
+          <div class="form-group">
+            <label for="parent-password">Password</label>
+            <input type="password" id="parent-password" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Sign In
+          </button>
+        </form>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Student Panel -->
+      <div id="student" class="panel">
+        <h2>Student Panel Login</h2>
+        <p class="panel-description">Access your academic records and course materials</p>
+        <form onsubmit="handleLogin(event, 'student')">
+          <div class="form-group">
+            <label for="student-username">Student ID</label>
+            <input type="text" id="student-username" placeholder="Enter student ID" required>
+          </div>
+          <div class="form-group">
+            <label for="student-password">Password</label>
+            <input type="password" id="student-password" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Sign In
+          </button>
+        </form>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="back-home">
+        <a href="index.html">
+          <i class="fas fa-arrow-left"></i>
+          Back to Homepage
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPanel(panelId) {
+      // Hide all panels
+      document.querySelectorAll('.panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      
+      // Remove active class from all tabs
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show selected panel
+      document.getElementById(panelId).classList.add('active');
+      
+      // Add active class to clicked tab
+      event.target.classList.add('active');
+    }
+
+    function handleLogin(event, panelType) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const username = form.querySelector('input[type="text"]').value;
+      const password = form.querySelector('input[type="password"]').value;
+      
+      // Simple validation
+      if (!username || !password) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      // Show loading state
+      const button = form.querySelector('.login-btn');
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+      button.disabled = true;
+      
+      // Check for specific credentials
+      if (username === 'aayush81' && password === 'school') {
+        setTimeout(() => {
+          // Success - redirect to dashboard
+          window.location.href = 'dashboard.html';
+        }, 1500);
+      } else {
+        // Simulate login process for other credentials
+        setTimeout(() => {
+          // For demo purposes, show success message
+          alert(`Successfully logged into ${panelType} panel!\nUsername: ${username}`);
+          
+          // Reset button
+          button.innerHTML = originalText;
+          button.disabled = false;
+          
+          // Clear form
+          form.reset();
+          
+          // Redirect to dashboard based on panel type
+          if (panelType === 'student') {
+            window.location.href = 'index7.html';
+          } else {
+            // For other panels, you can redirect to appropriate dashboards
+            alert('Dashboard for ' + panelType + ' panel will be implemented soon!');
+          }
+        }, 2000);
+      }
+    }
+
+    // Add some demo credentials for testing
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Demo Credentials:');
+      console.log('Admin: admin/admin123');
+      console.log('Teacher: teacher/teacher123');
+      console.log('Parent: parent/parent123');
+      console.log('Student: student/student123');
+    });
+  </script>
+</body>
+</html>

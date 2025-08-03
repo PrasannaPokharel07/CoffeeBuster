@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Portal Dashboard</title>
+  <style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --text:#1f2d3a;
+      --muted:#6b7a8c;
+      --radius:12px;
+      --shadow:0 10px 30px -10px rgba(0,0,0,0.08);
+      --transition:0.3s cubic-bezier(.4,.2,.2,1);
+    }
+    [data-theme="dark"] {
+      --bg:#1e2630;
+      --card:#2a343f;
+      --text:#e6ecf8;
+      --muted:#8a9bb8;
+    }
+    * {box-sizing:border-box;}
+    body {
+      margin:0;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,roboto,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+    }
+
+    .sidebar {
+      width:260px;
+      background:var(--card);
+      padding:1rem 0.5rem 2rem;
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+      position:fixed;
+      inset:0 auto auto 0;
+      overflow:auto;
+      transition:width var(--transition);
+      z-index:10;
+    }
+    .sidebar.collapsed { width:72px; }
+    .brand {
+      font-weight:700;
+      font-size:1.2rem;
+      padding:0 1rem;
+      margin-bottom:0.5rem;
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+    }
+    .nav {
+      flex:1;
+      padding:0 0.25rem;
+    }
+    .nav a {
+      display:flex;
+      align-items:center;
+      gap:0.9rem;
+      padding:10px 16px;
+      margin:4px 8px;
+      border-radius:10px;
+      text-decoration:none;
+      color:var(--text);
+      font-size:.95rem;
+      position:relative;
+      transition:background var(--transition);
+    }
+    .nav a:hover, .nav a.active {
+      background:rgba(0,0,0,0.04);
+    }
+    .nav a .icon {
+      width:24px; height:24px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+    .toggle-btn {
+      background:none;
+      border:none;
+      cursor:pointer;
+      padding:8px;
+      margin:0 12px;
+      border-radius:8px;
+      font-size:1rem;
+    }
+    .main {
+      flex:1;
+      margin-left:260px;
+      padding:1.5rem 1.5rem 2rem;
+      transition:margin var(--transition);
+    }
+    .sidebar.collapsed + .main { margin-left:72px; }
+
+    .topbar {
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:1rem;
+      align-items:center;
+    }
+    .search {
+      flex:1;
+      min-width:240px;
+      position:relative;
+    }
+    .search input {
+      width:100%;
+      padding:10px 14px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.1);
+      font-size:.9rem;
+      outline:none;
+      background:rgba(255,255,255,0.9);
+      color:var(--text);
+    }
+    .actions {
+      display:flex;
+      gap:1rem;
+      align-items:center;
+    }
+    .badge {
+      background:#ff5f5f;
+      color:#fff;
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:.6rem;
+      margin-left:4px;
+      display:inline-block;
+    }
+    .card-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:1rem;
+      margin:1rem 0 1.5rem;
+    }
+    .card {
+      background:var(--card);
+      padding:1.25rem 1rem;
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      gap:0.6rem;
+    }
+    .card .title {
+      font-size:.75rem;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight:600;
+      color:var(--muted);
+    }
+    .card .value {
+      font-size:1.6rem;
+      font-weight:700;
+      line-height:1.1;
+    }
+    .card small {
+      color:var(--muted);
+    }
+
+    .layout {
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:1.25rem;
+      margin-top:8px;
+    }
+    .table-wrapper {
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow: var(--shadow);
+      overflow:auto;
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:.9rem;
+    }
+    thead th {
+      text-align:left;
+      padding:10px 12px;
+      border-bottom:2px solid rgba(0,0,0,0.05);
+      position:sticky;
+      top:0;
+      background:var(--card);
+      font-weight:600;
+    }
+    tbody tr {
+      border-bottom:1px solid rgba(0,0,0,0.07);
+    }
+    tbody td {
+      padding:10px 12px;
+    }
+    .status {
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:.6rem;
+      font-weight:600;
+      display:inline-block;
+    }
+    .status.active { background:#d1f2ff; color:#0077cc; }
+    .status.completed { background:#dff7d8; color:#2d8f2e; }
+    .status.pending { background:#fff3cd; color:#ae7f1b; }
+
+    .notifications, .upcoming {
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap:0.75rem;
+    }
+    .notif-item {
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      border-radius:8px;
+      padding:8px;
+      background:rgba(0,0,0,0.015);
+    }
+    .notif-item .dot {
+      width:10px; height:10px;
+      border-radius:50%;
+      margin-top:6px;
+      flex-shrink:0;
+      background:#4f8cff;
+    }
+    .upcoming .event {
+      display:flex;
+      justify-content:space-between;
+      padding:10px 12px;
+      border-radius:8px;
+      background:rgba(0,0,0,0.02);
+    }
+
+    .profile {
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .avatar {
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#667eea,#764ba2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:1rem;
+    }
+    .user-info {
+      flex:1;
+    }
+
+    .dark-toggle {
+      cursor:pointer;
+      padding:6px 12px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.1);
+      background:rgba(255,255,255,0.9);
+      font-size:.8rem;
+    }
+
+    @media (max-width: 1024px) {
+      .layout {
+        grid-template-columns:1fr;
+      }
+      .main { padding:1rem; }
+    }
+    .hamburger {
+      display:none;
+    }
+    @media (max-width: 900px) {
+      .sidebar {
+        position:fixed;
+        left:-100%;
+        top:0;
+        bottom:0;
+        width:220px;
+        transition:left var(--transition);
+      }
+      .sidebar.open { left:0; }
+      .main { margin-left:0; }
+      .hamburger {
+        display:inline-flex;
+        background:none;
+        border:none;
+        font-size:1.2rem;
+        cursor:pointer;
+      }
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <button class="toggle-btn" id="collapseBtn" aria-label="Toggle sidebar">☰</button>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">UniGlobe</a>
+      </div>
+    </div>
+    <div class="nav">
+      <a href="#" class="active">
+        <div class="icon">🏠</div>
+        <div class="label">Dashboard</div>
+      </a>
+      <a href="#">
+        <div class="icon">📚</div>
+        <div class="label">Courses</div>
+      </a>
+      <a href="#">
+        <div class="icon">📝</div>
+        <div class="label">Grades</div>
+      </a>
+      <a href="#">
+        <div class="icon">📊</div>
+        <div class="label">Attendance</div>
+      </a>
+      <a href="#">
+        <div class="icon">🔔</div>
+        <div class="label">Notifications <span class="badge">3</span></div>
+      </a>
+      <a href="#">
+        <div class="icon">👤</div>
+        <div class="label">Profile</div>
+      </a>
+             <a href="index.html">
+         <div class="icon">🏠</div>
+         <div class="label">Home</div>
+       </a>
+       <a href="#" onclick="logout()">
+         <div class="icon">🚪</div>
+         <div class="label">Logout</div>
+       </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div style="display:flex; gap:10px; align-items:center;">
+        <button class="hamburger" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+        <div class="search">
+          <input type="text" placeholder="Search courses, assignments..." aria-label="Search"/>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="dark-toggle" id="themeBtn">Toggle Dark</button>
+        <div style="position:relative;">
+          <button aria-label="Notifications">🔔 <span class="badge">5</span></button>
+        </div>
+        <div class="profile">
+          <div class="avatar">AA</div>
+          <div class="user-info">
+            <div><strong>Aayush</strong></div>
+            <div style="font-size:.75rem; color: var(--muted);">Student ID: AAYUSH81</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="title">Current GPA</div>
+        <div class="value">3.8</div>
+        <small>Updated: Aug 1, 2025</small>
+      </div>
+      <div class="card">
+        <div class="title">Attendance</div>
+        <div class="value">85%</div>
+        <small>This semester</small>
+      </div>
+      <div class="card">
+        <div class="title">Upcoming Assignments</div>
+        <div class="value">4</div>
+        <small>Due in next 7 days</small>
+      </div>
+      <div class="card">
+        <div class="title">Notifications</div>
+        <div class="value">3 Unread</div>
+        <small>Check recent updates</small>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div>
+        <div class="table-wrapper">
+          <h2 style="margin-top:0;">Enrolled Courses</h2>
+          <table aria-label="Courses table">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Instructor</th>
+                <th>Grade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Web Development</td>
+                <td>Dr. Sharma</td>
+                <td>A-</td>
+                <td><span class="status active">Active</span></td>
+              </tr>
+              <tr>
+                <td>Database Systems</td>
+                <td>Prof. Koirala</td>
+                <td>B+</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>Operating Systems</td>
+                <td>Ms. Rai</td>
+                <td>A</td>
+                <td><span class="status completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>Software Engineering</td>
+                <td>Mr. Singh</td>
+                <td>B</td>
+                <td><span class="status active">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notifications" style="margin-top:1rem;">
+          <h3 style="margin:0;">Recent Activity</h3>
+          <div class="notif-item">
+            <div class="dot"></div>
+            <div>
+              <div><strong>Assignment Submitted:</strong> Database Management System - Assignment 3</div>
+              <div style="font-size:.75rem; color: var(--muted);">2 hours ago</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <div class="dot"></div>
+            <div>
+              <div><strong>Grade Released:</strong> Operating Systems - A.</div>
+              <div style="font-size:.75rem; color: var(--muted);">Aug 2, 2025</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <div class="dot"></div>
+            <div>
+              <div><strong>New Announcement:</strong> Semester break schedule updated.</div>
+              <div style="font-size:.75rem; color: var(--muted);">Aug 1, 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <div class="upcoming">
+          <h3 style="margin:0;">Upcoming Deadlines</h3>
+          <div class="event">
+            <div>
+              <div><strong>Database Systems - Quiz</strong></div>
+              <div style="font-size:.75rem; color: var(--muted);">Due: Aug 5, 2025</div>
+            </div>
+            <div style="align-self:center;">High</div>
+          </div>
+          <div class="event">
+            <div>
+              <div><strong>Web Dev - Final Project</strong></div>
+              <div style="font-size:.75rem; color: var(--muted);">Due: Aug 10, 2025</div>
+            </div>
+            <div style="align-self:center;">Medium</div>
+          </div>
+          <div class="event">
+            <div>
+              <div><strong>Attendance Review</div>
+              <div style="font-size:.75rem; color: var(--muted);">Aug 12, 2025</div>
+            </div>
+            <div style="align-self:center;">Low</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:1rem;">
+          <div class="title">Quick Links</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;">
+            <a href="#" style="flex:1; min-width:120px; padding:8px 12px; background:rgba(100,149,237,0.1); border-radius:8px; text-decoration:none; font-size:.8rem;">View Transcript</a>
+            <a href="#" style="flex:1; min-width:120px; padding:8px 12px; background:rgba(255,206,84,0.1); border-radius:8px; text-decoration:none; font-size:.8rem;">Download Schedule</a>
+            <a href="#" style="flex:1; min-width:120px; padding:8px 12px; background:rgba(102,204,153,0.1); border-radius:8px; text-decoration:none; font-size:.8rem;">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const collapseBtn = document.getElementById('collapseBtn');
+    const sidebar = document.getElementById('sidebar');
+    const themeBtn = document.getElementById('themeBtn');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+    collapseBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+    themeBtn.addEventListener('click', () => {
+      const root = document.body;
+      if (root.getAttribute('data-theme') === 'dark') {
+        root.setAttribute('data-theme', 'light');
+      } else {
+        root.setAttribute('data-theme', 'dark');
+      }
+    });
+    mobileMenuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    // Close mobile sidebar when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        if (!sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          sidebar.classList.remove('open');
+        }
+      }
+    });
+
+    function logout() {
+      if (confirm('Are you sure you want to logout?')) {
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
+</body>
+</html> 
