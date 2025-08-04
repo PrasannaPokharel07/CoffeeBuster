@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Teacher Dashboard - Uniglobe</title>
+  <link rel="stylesheet" href="teacher-dashboard.css?v=1.1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard">
+    
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://mis.uniglobecollege.edu.np/images/Uniglobelogo.png" alt="Uniglobe Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="teacher-dashboard.html" class="active">Dashboard</a>
+        <a href="teacher-profile.html">Profile</a>
+        <a href="#">My Classes</a>
+        <a href="#">Attendance</a>
+        <a href="#">Assignments</a>
+        <a href="#">Grades</a>
+        <a href="#">Notice Board</a>
+        <div class="nav-divider"></div>
+        <a href="index.html" class="nav-external">
+          <i class="fas fa-home"></i>
+          Back to Homepage
+        </a>
+                 <a href="login.html" class="nav-external">
+           <i class="fas fa-sign-out-alt"></i>
+           Switch Account
+         </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+             <header class="topbar">
+         <div class="user-info">
+           <span id="teacher-welcome">Welcome, Mr. Dinesh Subedi!</span>
+         </div>
+       </header>
+
+      <div class="welcome-card">
+        <h2>Welcome to Your Teacher Dashboard</h2>
+        <p>Manage your classes, students, and teaching activities.</p>
+      </div>
+
+      <section class="info-cards">
+        <div class="info-card small">
+          <div class="card-icon">👥</div>
+          <h3>Total Students</h3>
+          <div class="big-number">156</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📚</div>
+          <h3>My Classes</h3>
+          <div class="big-number">8</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📝</div>
+          <h3>Pending Assignments</h3>
+          <div class="big-number">12</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📅</div>
+          <h3>Today's Classes</h3>
+          <div class="big-number">4</div>
+        </div>
+      </section>
+
+      
+      <section class="content-sections">
+        <div class="section-card">
+          <h3>This Month's Calendar</h3>
+          <div class="simple-calendar">
+            <div class="calendar-header">
+              <h4>October 2024</h4>
+            </div>
+            <div class="calendar-grid">
+              <div class="weekdays">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+                <span>Thu</span><span>Fri</span><span>Sat</span>
+              </div>
+              <div class="days">
+                <span class="other-month">29</span><span class="other-month">30</span>
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                <span>11</span><span>12</span><span>13</span><span>14</span>
+                <span class="event">15</span><span class="event">16</span><span class="event">17</span>
+                <span class="event">18</span><span class="event">19</span><span class="event">20</span>
+                <span>21</span><span>22</span><span>23</span><span>24</span>
+                <span class="event">25</span><span>26</span><span>27</span><span>28</span>
+                <span>29</span><span>30</span><span>31</span>
+                <span class="other-month">1</span><span class="other-month">2</span>
+              </div>
+            </div>
+            <div class="events-list">
+              <h5>Important Events</h5>
+              <ul>
+                <li><strong>Oct 15-20:</strong> Mid-term Exams</li>
+                <li><strong>Oct 25:</strong> Parent-Teacher Meeting</li>
+                <li><strong>Nov 10:</strong> Annual Day</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>My Classes</h3>
+          <div class="classes-list">
+            <div class="class-item">
+              <span class="class-name">Chemistry - Grade 11</span>
+              <span class="class-time">8:00 AM - 9:00 AM</span>
+              <span class="student-count">25 students</span>
+            </div>
+            <div class="class-item">
+              <span class="class-name">Chemistry - Grade 12</span>
+              <span class="class-time">9:00 AM - 10:00 AM</span>
+              <span class="student-count">28 students</span>
+            </div>
+            <div class="class-item">
+              <span class="class-name">Chemistry Lab - Grade 11</span>
+              <span class="class-time">10:00 AM - 11:00 AM</span>
+              <span class="student-count">25 students</span>
+            </div>
+            <div class="class-item">
+              <span class="class-name">Chemistry Lab - Grade 12</span>
+              <span class="class-time">11:00 AM - 12:00 PM</span>
+              <span class="student-count">28 students</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-sections">
+        <div class="section-card">
+          <h3>Latest Notices</h3>
+          <div class="notices-list">
+            <div class="notice-item">
+              <span class="notice-title">Staff Meeting Tomorrow</span>
+              <span class="notice-date">2 days ago</span>
+            </div>
+            <div class="notice-item">
+              <span class="notice-title">Exam Papers Due</span>
+              <span class="notice-date">1 week ago</span>
+            </div>
+            <div class="notice-item">
+              <span class="notice-title">Professional Development Workshop</span>
+              <span class="notice-date">1 week ago</span>
+            </div>
+          </div>
+        </div>
+
+
+      <section class="content-sections">
+        <div class="section-card">
+          <h3>Today's Schedule</h3>
+          <div class="schedule-list compact">
+            <div class="schedule-item">
+              <span class="time">8:00 AM</span>
+              <span class="subject">Chemistry - Grade 11</span>
+              <span class="room">Room 201</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">9:00 AM</span>
+              <span class="subject">Chemistry - Grade 12</span>
+              <span class="room">Room 202</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">10:00 AM</span>
+              <span class="subject">Chemistry Lab - Grade 11</span>
+              <span class="room">Lab 3</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">11:00 AM</span>
+              <span class="subject">Chemistry Lab - Grade 12</span>
+              <span class="room">Lab 3</span>
+            </div>
+          </div>
+        </div>
+
+        
+      </section>
+         </main>
+   </div>
+
+       <script>
+  
+      const teacherDatabase = {
+        'dinesh81': {
+          name: 'Mr. Dinesh Subedi',
+          subject: 'Chemistry',
+          totalStudents: 156,
+          classes: 8,
+          pendingAssignments: 12,
+          todayClasses: 4,
+          schedule: [
+            { time: '8:00 AM', subject: 'Chemistry - Grade 11', room: 'Room 201' },
+            { time: '9:00 AM', subject: 'Chemistry - Grade 12', room: 'Room 202' },
+            { time: '10:00 AM', subject: 'Chemistry Lab - Grade 11', room: 'Lab 3' },
+            { time: '11:00 AM', subject: 'Chemistry Lab - Grade 12', room: 'Lab 3' }
+          ],
+          classList: [
+            { name: 'Chemistry - Grade 11', time: '8:00 AM - 9:00 AM', students: 25 },
+            { name: 'Chemistry - Grade 12', time: '9:00 AM - 10:00 AM', students: 28 },
+            { name: 'Chemistry Lab - Grade 11', time: '10:00 AM - 11:00 AM', students: 25 },
+            { name: 'Chemistry Lab - Grade 12', time: '11:00 AM - 12:00 PM', students: 28 }
+          ]
+        },
+        'priya81': {
+          name: 'Ms. Priya Sharma',
+          subject: 'Physics',
+          totalStudents: 142,
+          classes: 6,
+          pendingAssignments: 8,
+          todayClasses: 3,
+          schedule: [
+            { time: '9:00 AM', subject: 'Physics - Grade 11', room: 'Room 301' },
+            { time: '10:00 AM', subject: 'Physics - Grade 12', room: 'Room 302' },
+            { time: '11:00 AM', subject: 'Physics Lab - Grade 11', room: 'Lab 1' }
+          ],
+          classList: [
+            { name: 'Physics - Grade 11', time: '9:00 AM - 10:00 AM', students: 22 },
+            { name: 'Physics - Grade 12', time: '10:00 AM - 11:00 AM', students: 24 },
+            { name: 'Physics Lab - Grade 11', time: '11:00 AM - 12:00 PM', students: 22 }
+          ]
+        },
+        'rajesh81': {
+          name: 'Mr. Rajesh Kumar',
+          subject: 'Mathematics',
+          totalStudents: 180,
+          classes: 10,
+          pendingAssignments: 15,
+          todayClasses: 5,
+          schedule: [
+            { time: '8:00 AM', subject: 'Mathematics - Grade 11', room: 'Room 401' },
+            { time: '9:00 AM', subject: 'Mathematics - Grade 12', room: 'Room 402' },
+            { time: '10:00 AM', subject: 'Mathematics - Grade 11', room: 'Room 401' },
+            { time: '11:00 AM', subject: 'Mathematics - Grade 12', room: 'Room 402' },
+            { time: '12:00 PM', subject: 'Mathematics Lab - Grade 11', room: 'Lab 2' }
+          ],
+          classList: [
+            { name: 'Mathematics - Grade 11', time: '8:00 AM - 9:00 AM', students: 30 },
+            { name: 'Mathematics - Grade 12', time: '9:00 AM - 10:00 AM', students: 32 },
+            { name: 'Mathematics - Grade 11', time: '10:00 AM - 11:00 AM', students: 30 },
+            { name: 'Mathematics - Grade 12', time: '11:00 AM - 12:00 PM', students: 32 },
+            { name: 'Mathematics Lab - Grade 11', time: '12:00 PM - 1:00 PM', students: 30 }
+          ]
+        },
+        'navingurung81': {
+          name: 'Mr. Navin Gurung',
+          subject: 'Computer Science',
+          totalStudents: 165,
+          classes: 7,
+          pendingAssignments: 10,
+          todayClasses: 4,
+          schedule: [
+            { time: '8:00 AM', subject: 'Computer Science - Grade 11', room: 'Computer Lab 1' },
+            { time: '9:00 AM', subject: 'Computer Science - Grade 12', room: 'Computer Lab 1' },
+            { time: '10:00 AM', subject: 'Programming - Grade 11', room: 'Computer Lab 2' },
+            { time: '11:00 AM', subject: 'Programming - Grade 12', room: 'Computer Lab 2' }
+          ],
+          classList: [
+            { name: 'Computer Science - Grade 11', time: '8:00 AM - 9:00 AM', students: 28 },
+            { name: 'Computer Science - Grade 12', time: '9:00 AM - 10:00 AM', students: 30 },
+            { name: 'Programming - Grade 11', time: '10:00 AM - 11:00 AM', students: 28 },
+            { name: 'Programming - Grade 12', time: '11:00 AM - 12:00 PM', students: 30 },
+            { name: 'Web Development - Grade 12', time: '12:00 PM - 1:00 PM', students: 25 },
+            { name: 'Database Management - Grade 11', time: '1:00 PM - 2:00 PM', students: 24 }
+          ]
+        }
+      };
+
+      
+      function updateTeacherDashboard(teacherId) {
+        console.log('Updating dashboard for teacher:', teacherId);
+        const teacher = teacherDatabase[teacherId];
+        if (!teacher) {
+          console.log('Teacher not found, using default profile');
+          return;
+        }
+
+        console.log('Teacher data:', teacher);
+
+        
+        const welcomeElement = document.getElementById('teacher-welcome');
+        
+        if (welcomeElement) {
+          welcomeElement.textContent = `Welcome, ${teacher.name}!`;
+        }
+
+        
+        const infoCards = document.querySelectorAll('.info-card .big-number');
+        if (infoCards.length >= 4) {
+          infoCards[0].textContent = teacher.totalStudents;
+          infoCards[1].textContent = teacher.classes;
+          infoCards[2].textContent = teacher.pendingAssignments;
+          infoCards[3].textContent = teacher.todayClasses;
+        }
+
+        
+        const scheduleList = document.querySelector('.schedule-list');
+        if (scheduleList) {
+          scheduleList.innerHTML = '';
+          teacher.schedule.forEach(item => {
+            const scheduleItem = document.createElement('div');
+            scheduleItem.className = 'schedule-item';
+            scheduleItem.innerHTML = `
+              <span class="time">${item.time}</span>
+              <span class="subject">${item.subject}</span>
+              <span class="room">${item.room}</span>
+            `;
+            scheduleList.appendChild(scheduleItem);
+          });
+        }
+
+        
+        const classesList = document.querySelector('.classes-list');
+        if (classesList) {
+          classesList.innerHTML = '';
+          teacher.classList.forEach(item => {
+            const classItem = document.createElement('div');
+            classItem.className = 'class-item';
+            classItem.innerHTML = `
+              <span class="class-name">${item.name}</span>
+              <span class="class-time">${item.time}</span>
+              <span class="student-count">${item.students} students</span>
+            `;
+            classesList.appendChild(classItem);
+          });
+        }
+
+        console.log('Dashboard updated successfully');
+      }
+
+      
+      function getTeacherId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const teacherId = urlParams.get('teacherId') || localStorage.getItem('teacherId') || 'dinesh81';
+        console.log('Teacher ID:', teacherId);
+        return teacherId;
+      }
+
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('Page loaded, initializing dashboard...');
+        const teacherId = getTeacherId();
+        updateTeacherDashboard(teacherId);
+        
+        
+        localStorage.setItem('teacherId', teacherId);
+      });
+    </script>
+ </body>
+</html> 

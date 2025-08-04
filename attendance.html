@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Attendance - Uniglobe</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard">
+   
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://mis.uniglobecollege.edu.np/images/Uniglobelogo.png" alt="Uniglobe Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="attendance.html" class="active">Attendance</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="#">Calendar</a>
+        <a href="#">Exam Results</a>
+        <a href="#">Notice Board</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="user-info">
+          <img src="https://images.uniglobecollege.edu.np/Student/208182_102-Science-2081/284c5061-ec99-4c01-846e-8f7991b9fbe2__Ayush%20Adhikari.JPG" alt="User" />
+          <span>Welcome, Ayush Adhikari!</span>
+        </div>
+      </header>
+
+      <section class="content-header">
+        <h1>Attendance Record</h1>
+        <p>View your attendance for all subjects</p>
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+      </section>
+
+      <section class="info-cards">
+        <div class="info-card small">
+          <div class="card-icon">📊</div>
+          <h3>Overall Attendance</h3>
+          <div class="big-number">85%</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📚</div>
+          <h3>Present Days</h3>
+          <div class="big-number">68</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">❌</div>
+          <h3>Absent Days</h3>
+          <div class="big-number">12</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📅</div>
+          <h3>Total Days</h3>
+          <div class="big-number">80</div>
+        </div>
+      </section>
+
+      
+      <section class="content-sections">
+        <div class="section-card">
+          <h3>Monthly Overview</h3>
+          <div class="monthly-calendar">
+            <div class="calendar-header">
+              <h4>August 2025</h4>
+            </div>
+            <div class="calendar-grid">
+              <div class="weekdays">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+                <span>Thu</span><span>Fri</span><span>Sat</span>
+              </div>
+              <div class="days">
+                <span class="other-month">27</span><span class="other-month">28</span><span class="other-month">29</span><span class="other-month">30</span><span class="other-month">31</span>
+                <span class="absent">1</span><span class="holiday">2</span>
+                <span class="present">3</span><span class="present">4</span><span class="present">5</span><span class="present">6</span><span class="present">7</span><span class="present">8</span><span class="holiday">9</span>
+                <span class="present">10</span><span class="present">11</span><span class="present">12</span><span class="present">13</span><span class="present">14</span><span class="present">15</span><span class="holiday">16</span>
+                <span class="present">17</span><span class="present">18</span><span class="present">19</span><span class="present">20</span><span class="present">21</span><span class="present">22</span><span class="holiday">23</span>
+                <span class="present">24</span><span class="present">25</span><span class="present">26</span><span class="present">27</span><span class="present">28</span><span class="present">29</span><span class="holiday">30</span>
+                <span class="present">31</span>
+                <span class="other-month">1</span><span class="other-month">2</span><span class="other-month">3</span><span class="other-month">4</span><span class="other-month">5</span><span class="other-month">6</span>
+              </div>
+            </div>
+            <div class="calendar-legend">
+              <div class="legend-item">
+                <span class="legend-color present"></span>
+                <span>Present</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color absent"></span>
+                <span>Absent</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color holiday"></span>
+                <span>Holiday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>This Week</h3>
+          <div class="weekly-attendance">
+            <div class="week-day">
+              <span class="day-name">Monday</span>
+              <span class="day-status present">Present</span>
+            </div>
+            <div class="week-day">
+              <span class="day-name">Tuesday</span>
+              <span class="day-status present">Present</span>
+            </div>
+            <div class="week-day">
+              <span class="day-name">Wednesday</span>
+              <span class="day-status present">Present</span>
+            </div>
+            <div class="week-day">
+              <span class="day-name">Thursday</span>
+              <span class="day-status present">Present</span>
+            </div>
+            <div class="week-day">
+              <span class="day-name">Friday</span>
+              <span class="day-status absent">Absent</span>
+            </div>
+            <div class="week-day">
+              <span class="day-name">Saturday</span>
+              <span class="day-status holiday">Holiday</span>
+            </div>
+            <div class="week-day">
+              <span class="day-name">Sunday</span>
+              <span class="day-status present">Present</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="content-sections">
+        <div class="section-card">
+          <h3>Quick Info</h3>
+          <div class="quick-info">
+            <div class="info-item">
+              <span class="info-label">Last Absent:</span>
+              <span class="info-value">August 1st</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Next Holiday:</span>
+              <span class="info-value">August 9th (Saturday)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Attendance Goal:</span>
+              <span class="info-value">75% minimum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>Tips</h3>
+          <div class="tips-list">
+            <div class="tip-item">
+              <span class="tip-text">✓ Come to school on time</span>
+            </div>
+            <div class="tip-item">
+              <span class="tip-text">✓ Tell teacher if you are sick</span>
+            </div>
+            <div class="tip-item">
+              <span class="tip-text">✓ Keep good attendance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html> 

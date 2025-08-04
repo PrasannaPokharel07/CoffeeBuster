@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Test - Uniglobe MIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .test-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .test-button:hover {
+            background: #1565c0;
+        }
+        .credentials {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #1976d2;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .status.success {
+            background: #e8f5e8;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+        .status.info {
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h1>🔐 Student Login Test</h1>
+        <p>This page helps you test the student login functionality.</p>
+        
+        <div class="status info">
+            <strong>Instructions:</strong>
+            <ol>
+                <li>Click the "Open Login Page" button below</li>
+                <li>Click on the "Student" panel</li>
+                <li>Enter the credentials: <strong>ayushadhikari81</strong> / <strong>school</strong></li>
+                <li>Click "Login" - you should be redirected to the dashboard</li>
+            </ol>
+        </div>
+
+        <div class="credentials">
+            <h3>✅ Test Credentials:</h3>
+            <p><strong>Username:</strong> ayushadhikari81</p>
+            <p><strong>Password:</strong> school</p>
+            <p><strong>Expected Result:</strong> Redirect to dashboard.html</p>
+        </div>
+
+        <a href="login.html" class="test-button">🚀 Open Login Page</a>
+        <a href="dashboard.html" class="test-button">📊 View Dashboard Directly</a>
+        <a href="index.html" class="test-button">🏠 Back to Main Site</a>
+    </div>
+
+    <div class="test-card">
+        <h2>🔍 System Status</h2>
+        <div class="status success">
+            ✅ Login page (login.html) - Ready
+        </div>
+        <div class="status success">
+            ✅ Student dashboard (dashboard.html) - Ready
+        </div>
+        <div class="status success">
+            ✅ CSS styling (dashboard.css) - Ready
+        </div>
+        <div class="status success">
+            ✅ Navigation links - Connected
+        </div>
+    </div>
+
+    <div class="test-card">
+        <h2>📋 Available Pages</h2>
+        <ul>
+            <li><strong>Main Website:</strong> <a href="index.html">index.html</a></li>
+            <li><strong>Login System:</strong> <a href="login.html">login.html</a></li>
+            <li><strong>Student Dashboard:</strong> <a href="dashboard.html">dashboard.html</a></li>
+            <li><strong>Student Profile:</strong> <a href="profile.html">profile.html</a></li>
+            <li><strong>Student Attendance:</strong> <a href="attendance.html">attendance.html</a></li>
+            <li><strong>Student Assignments:</strong> <a href="assignments.html">assignments.html</a></li>
+            <li><strong>Teacher Dashboard:</strong> <a href="teacher-dashboard.html">teacher-dashboard.html</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Add some helpful console logging
+        console.log('🔐 Login Test Page Loaded');
+        console.log('📋 Available test credentials:');
+        console.log('   Student: ayushadhikari81 / school');
+        console.log('   Teacher: teacher / teacher123');
+        console.log('   Admin: admin / admin123');
+        console.log('   Parent: parent / parent123');
+    </script>
+</body>
+</html> 

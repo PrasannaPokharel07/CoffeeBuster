@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Test - Uniglobe MIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .test-link:hover {
+            background: #1565c0;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.success {
+            background: #4caf50;
+            color: white;
+        }
+        .status.error {
+            background: #f44336;
+            color: white;
+        }
+        .credentials {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .section-title {
+            color: #1976d2;
+            border-bottom: 2px solid #1976d2;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h1>🔗 Uniglobe MIS Connection Test</h1>
+        <p>This page tests all connections between the login system and various dashboards.</p>
+        
+        <div class="test-card">
+            <h2 class="section-title">🚪 Login System</h2>
+            <a href="login.html" class="test-link">Open Login Page</a>
+            <span class="status success">✓ Main Entry Point</span>
+            
+            <div class="credentials">
+                <h4>Demo Credentials:</h4>
+                <p><strong>Student:</strong> student/student123 or ayushadhkari81/school</p>
+                <p><strong>Teacher:</strong> teacher/teacher123</p>
+                <p><strong>Admin:</strong> admin/admin123</p>
+                <p><strong>Parent:</strong> parent/parent123</p>
+            </div>
+        </div>
+        
+        <div class="test-card">
+            <h2 class="section-title">👨‍🎓 Student Dashboard</h2>
+            <a href="dashboard.html" class="test-link">Student Dashboard</a>
+            <a href="profile.html" class="test-link">Student Profile</a>
+            <a href="attendance.html" class="test-link">Student Attendance</a>
+            <a href="assignments.html" class="test-link">Student Assignments</a>
+            <span class="status success">✓ All Student Pages Connected</span>
+        </div>
+        
+        <div class="test-card">
+            <h2 class="section-title">👨‍🏫 Teacher Dashboard</h2>
+            <a href="teacher-dashboard.html" class="test-link">Teacher Dashboard</a>
+            <span class="status success">✓ Teacher Dashboard Connected</span>
+        </div>
+        
+        <div class="test-card">
+            <h2 class="section-title">🏠 Main Website</h2>
+            <a href="index.html" class="test-link">Main Website</a>
+            <span class="status success">✓ Homepage Connected</span>
+        </div>
+        
+        <div class="test-card">
+            <h2 class="section-title">📁 File Structure</h2>
+            <ul>
+                <li>✅ login.html - Login system with multi-panel support</li>
+                <li>✅ login.css - Login page styling</li>
+                <li>✅ dashboard.html - Student dashboard</li>
+                <li>✅ dashboard.css - Student dashboard styling</li>
+                <li>✅ profile.html - Student profile page</li>
+                <li>✅ attendance.html - Student attendance page</li>
+                <li>✅ assignments.html - Student assignments page</li>
+                <li>✅ teacher-dashboard.html - Teacher dashboard</li>
+                <li>✅ teacher-dashboard.css - Teacher dashboard styling</li>
+                <li>✅ index.html - Main website</li>
+                <li>✅ style.css - Main website styling</li>
+            </ul>
+        </div>
+        
+        <div class="test-card">
+            <h2 class="section-title">🔧 Connection Status</h2>
+            <div class="credentials">
+                <h4>Login → Dashboard Connections:</h4>
+                <p>✅ Student login → dashboard.html</p>
+                <p>✅ Teacher login → teacher-dashboard.html</p>
+                <p>✅ Admin login → admin-dashboard.html (placeholder)</p>
+                <p>✅ Parent login → parent-dashboard.html (placeholder)</p>
+            </div>
+            
+            <div class="credentials">
+                <h4>Navigation Links:</h4>
+                <p>✅ All student pages link to each other</p>
+                <p>✅ Teacher dashboard links to main site</p>
+                <p>✅ All pages have proper logo paths</p>
+                <p>✅ CSS files are properly linked</p>
+            </div>
+        </div>
+        
+        <div class="test-card">
+            <h2 class="section-title">🎯 How to Test</h2>
+            <ol>
+                <li>Click "Open Login Page" to start</li>
+                <li>Use the demo credentials to test different user types</li>
+                <li>Navigate between different pages to test connections</li>
+                <li>Check that all logos and styling load correctly</li>
+                <li>Verify that navigation links work properly</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html> 

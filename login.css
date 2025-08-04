@@ -1,4 +1,4 @@
-/* Uniglobe SS College - Login Portal CSS */
+
 
 * {
   margin: 0;
@@ -25,7 +25,6 @@ body {
   width: 100%;
 }
 
-/* Welcome Message */
 .welcome-message {
   text-align: center;
   margin-top: 20px;
@@ -48,7 +47,7 @@ body {
   line-height: 1.4;
 }
 
-/* Header Section */
+
 .header {
   background: #3498db;
   color: white;
@@ -79,7 +78,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Login Tabs */
+
 .login-tabs {
   display: flex;
   background: #3a3a3a;
@@ -124,7 +123,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Login Content */
+
 .login-content {
   padding: 20px;
 }
@@ -164,7 +163,7 @@ body {
   line-height: 1.4;
 }
 
-/* Form Styling */
+
 .form-group {
   margin-bottom: 12px;
 }
@@ -203,7 +202,7 @@ body {
   border-color: #e74c3c;
 }
 
-/* Login Button */
+
 .login-btn {
   width: 100%;
   padding: 8px 10px;
@@ -237,7 +236,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Forgot Password */
 .forgot-password {
   text-align: center;
   margin-top: 12px;
@@ -255,7 +253,7 @@ body {
   text-decoration: underline;
 }
 
-/* Back to Home */
+
 .back-home {
   text-align: center;
   margin-top: 20px;
@@ -281,7 +279,6 @@ body {
   color: #2980b9;
 }
 
-/* Loading Animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -291,7 +288,6 @@ body {
   animation: spin 1s linear infinite;
 }
 
-/* Success/Error Messages */
 .message {
   padding: 10px;
   border-radius: 6px;
@@ -312,7 +308,7 @@ body {
   border: 1px solid #f5c6cb;
 }
 
-/* Enhanced Hover Effects */
+
 .tab-btn:hover i {
   transform: scale(1.1);
   transition: transform 0.3s ease;
@@ -323,7 +319,6 @@ body {
   background: #2c2c2c;
 }
 
-/* Focus States */
 .tab-btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
@@ -334,7 +329,7 @@ body {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .login-tabs {
     flex-direction: column;
@@ -407,7 +402,6 @@ body {
   }
 }
 
-/* Print Styles */
 @media print {
   .login-container {
     box-shadow: none;
@@ -420,7 +414,6 @@ body {
   }
 }
 
-/* High Contrast Mode */
 @media (prefers-contrast: high) {
   .form-group input {
     border-width: 3px;
@@ -431,7 +424,6 @@ body {
   }
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

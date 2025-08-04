@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Profile - Uniglobe</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard">
+   
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://mis.uniglobecollege.edu.np/images/Uniglobelogo.png" alt="Uniglobe Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="#">Calendar</a>
+        <a href="#">Exam Results</a>
+        <a href="#">Notice Board</a>
+      </nav>
+    </aside>
+
+    
+    <main class="main-content">
+      <header class="topbar">
+        <div class="user-info">
+          <img src="https://images.uniglobecollege.edu.np/Student/208182_102-Science-2081/284c5061-ec99-4c01-846e-8f7991b9fbe2__Ayush%20Adhikari.JPG" alt="User" />
+          <span>Welcome, Ayush Adhikari!</span>
+        </div>
+      </header>
+
+      <section class="content-header">
+        <h1>Student Profile</h1>
+        <p>Basic student information</p>
+      </section>
+
+      <section class="info-cards">
+        <div class="info-card small">
+          <div class="card-icon">📊</div>
+          <h3>Attendance</h3>
+          <div class="big-number">85%</div>
+          <a href="attendance.html" class="card-link">View Details</a>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📚</div>
+          <h3>Assignments</h3>
+          <div class="big-number">3</div>
+          <a href="assignments.html" class="card-link">View Details</a>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📈</div>
+          <h3>Average Score</h3>
+          <div class="big-number">92%</div>
+        </div>
+        
+        <div class="info-card small">
+          <div class="card-icon">📅</div>
+          <h3>Today's Classes</h3>
+          <div class="big-number">4</div>
+        </div>
+      </section>
+
+      
+      <div class="section-card">
+        <h3>Student Information</h3>
+        <div class="student-photo-section">
+          <div class="student-photo">
+            <img src="https://images.uniglobecollege.edu.np/Student/208182_102-Science-2081/284c5061-ec99-4c01-846e-8f7991b9fbe2__Ayush%20Adhikari.JPG" alt="Ayush Adhikari" />
+          </div>
+          <div class="basic-info">
+            <div class="info-row">
+              <span class="info-label">Name:</span>
+              <span class="info-value">Ayush Adhikari</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">ID:</span>
+              <span class="info-value">27518111606</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Program:</span>
+              <span class="info-value">10+2 Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="section-card">
+        <h3>Personal Details</h3>
+        <div class="form-section">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="date" value="2008-03-27" />
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <select>
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="tel" value="9847688235" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" value="ayushadhikari81@uniglobecollege.edu.np" readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="content-sections">
+        <div class="section-card">
+          <h3>Father's Information</h3>
+          <div class="form-section">
+            <div class="form-group">
+              <label>Father's Name</label>
+              <input type="text" value="Sriram Adhikari" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" value="9851104670" />
+              </div>
+              <div class="form-group">
+                <label>Occupation</label>
+                <input type="text" placeholder="Enter occupation" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>Mother's Information</h3>
+          <div class="form-section">
+            <div class="form-group">
+              <label>Mother's Name</label>
+              <input type="text" value="Jamuna Acharya Adhikari" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" value="99841510549" />
+              </div>
+              <div class="form-group">
+                <label>Occupation</label>
+                <input type="text" placeholder="Enter occupation" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="action-buttons">
+        <button type="button" class="btn btn-primary">Save Changes</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html> 

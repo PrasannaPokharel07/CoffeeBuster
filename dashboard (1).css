@@ -98,7 +98,6 @@ body {
   color: #e0e0e0;
 }
 
-
 .welcome-card {
   background: linear-gradient(135deg, #404040, #2c2c2c);
   color: white;
@@ -187,6 +186,21 @@ body {
   font-size: 16px;
 }
 
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #e0e0e0;
+  text-decoration: underline;
+}
+
 
 .content-sections {
   display: grid;
@@ -226,52 +240,51 @@ body {
   font-weight: 600;
 }
 
-
 .simple-calendar {
   background: #1a1a1a;
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #404040;
 }
 
 .calendar-header h4 {
   text-align: center;
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 15px;
   color: #e0e0e0;
   font-weight: 600;
 }
 
 .calendar-grid {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  margin-bottom: 10px;
+  gap: 3px;
+  margin-bottom: 8px;
 }
 
 .weekdays span {
   text-align: center;
   font-weight: 600;
   color: #888;
-  font-size: 14px;
-  padding: 10px 0;
+  font-size: 12px;
+  padding: 6px 0;
 }
 
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 3px;
 }
 
 .days span {
   text-align: center;
-  padding: 12px 8px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -294,13 +307,13 @@ body {
 
 .events-list {
   border-top: 2px solid #404040;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .events-list h5 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #e0e0e0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -309,8 +322,8 @@ body {
 }
 
 .events-list li {
-  padding: 8px 0;
-  font-size: 16px;
+  padding: 6px 0;
+  font-size: 14px;
   color: #e0e0e0;
   border-bottom: 1px solid #404040;
 }
@@ -318,7 +331,6 @@ body {
 .events-list li:last-child {
   border-bottom: none;
 }
-
 
 .teachers-list {
   display: flex;
@@ -352,7 +364,6 @@ body {
   font-weight: 500;
 }
 
-
 .notices-list {
   display: flex;
   flex-direction: column;
@@ -380,7 +391,6 @@ body {
   color: #aaa;
   font-size: 14px;
 }
-
 
 .assignments-list {
   display: flex;
@@ -414,7 +424,6 @@ body {
   font-size: 16px;
   margin: 0;
 }
-
 
 .schedule-list {
   display: flex;
@@ -696,6 +705,20 @@ body {
   margin: 0;
 }
 
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #e0e0e0;
+  text-decoration: underline;
+}
 
 .student-photo-section {
   display: flex;
@@ -750,34 +773,34 @@ body {
 .form-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 15px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .form-group label {
   font-weight: 600;
   color: #e0e0e0;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 10px 12px;
+  padding: 8px 10px;
   border: 1px solid #404040;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 13px;
   transition: border-color 0.3s ease;
   background-color: #1a1a1a;
   color: #e0e0e0;
@@ -841,7 +864,6 @@ body {
   transform: translateY(-1px);
 }
 
-
 @media (max-width: 768px) {
   .profile-info {
     flex-direction: column;
@@ -898,28 +920,605 @@ body {
 }
 
 
-.nav-divider {
-  height: 1px;
+.subject-attendance {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subject-item {
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #404040;
+}
+
+.subject-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.subject-name {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 18px;
+}
+
+.attendance-percent {
+  font-weight: 700;
+  color: #888;
+  font-size: 20px;
+}
+
+.attendance-bar {
+  width: 100%;
+  height: 8px;
   background: #404040;
-  margin: 15px 0;
-  opacity: 0.5;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
-.nav-external {
-  color: #888 !important;
-  font-size: 13px !important;
-  padding: 8px 15px !important;
-  border-left: 3px solid transparent !important;
-  transition: all 0.3s ease;
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  border-radius: 4px;
+  transition: width 0.3s ease;
 }
 
-.nav-external:hover {
-  color: #e0e0e0 !important;
-  background: #2a2a2a !important;
-  border-left-color: #666 !important;
+.attendance-details {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  font-size: 14px;
 }
 
-.nav-external i {
-  margin-right: 8px;
+
+.monthly-calendar {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #404040;
+}
+
+.calendar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #404040;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e0e0e0;
   font-size: 12px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-color.present {
+  background: #4CAF50;
+}
+
+.legend-color.absent {
+  background: #f44336;
+}
+
+.legend-color.holiday {
+  background: #ff9800;
+}
+
+.days span.present {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+}
+
+.days span.absent {
+  background-color: #f44336;
+  color: white;
+  font-weight: 600;
+}
+
+.days span.holiday {
+  background-color: #ff9800;
+  color: white;
+  font-weight: 600;
+}
+
+.recent-attendance {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.attendance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border-left: 4px solid #888;
+  border: 1px solid #404040;
+}
+
+.attendance-item.present {
+  border-left-color: #4CAF50;
+}
+
+.attendance-item.absent {
+  border-left-color: #f44336;
+}
+
+.date {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.status {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.attendance-item.present .status {
+  background: #4CAF50;
+  color: white;
+}
+
+.attendance-item.absent .status {
+  background: #f44336;
+  color: white;
+}
+
+.subject {
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rule-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border-left: 4px solid #888;
+  border: 1px solid #404040;
+}
+
+.rule-title {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.rule-desc {
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+.weekly-attendance {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.week-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #404040;
+}
+
+.day-name {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.day-status {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 16px;
+}
+
+.day-status.present {
+  background: #4CAF50;
+  color: white;
+}
+
+.day-status.absent {
+  background: #f44336;
+  color: white;
+}
+
+.day-status.holiday {
+  background: #ff9800;
+  color: white;
+}
+
+
+.simple-attendance {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.attendance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #404040;
+}
+
+.attendance-row .date {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.attendance-row .status {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.attendance-row .status.present {
+  background: #4CAF50;
+  color: white;
+}
+
+.attendance-row .status.absent {
+  background: #f44336;
+  color: white;
+}
+
+
+.simple-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.simple-rules .rule-item {
+  padding: 12px 15px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border-left: 4px solid #4CAF50;
+  border: 1px solid #404040;
+}
+
+.simple-rules .rule-title {
+  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 15px;
+  margin: 0;
+}
+
+
+.quick-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #404040;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.info-value {
+  font-weight: 500;
+  color: #888;
+  font-size: 14px;
+}
+
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tip-item {
+  padding: 10px 15px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border-left: 3px solid #4CAF50;
+  border: 1px solid #404040;
+}
+
+.tip-text {
+  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+
+.assignments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.assignment-item {
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #404040;
+  transition: transform 0.3s ease;
+}
+
+.assignment-item:hover {
+  transform: translateY(-2px);
+  border-color: #666;
+}
+
+.assignment-item.completed {
+  border-left: none;
+}
+
+.assignment-item.pending {
+  border-left: none;
+}
+
+.assignment-item.late {
+  border-left: none;
+}
+
+.assignment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.assignment-title {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.assignment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.status {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 16px;
+}
+
+.status.completed {
+  background: #4CAF50;
+  color: white;
+}
+
+.status.pending {
+  background: #ff9800;
+  color: white;
+}
+
+.status.late {
+  background: #f44336;
+  color: white;
+}
+
+
+.subject-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subject-item {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #404040;
+}
+
+.subject-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.subject-name {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.progress-percent {
+  font-weight: 700;
+  color: #4CAF50;
+  font-size: 18px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #404040;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-details {
+  color: #aaa;
+  font-size: 12px;
+}
+
+
+.recent-assignments {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #404040;
+}
+
+.recent-item.completed {
+  border-left: none;
+}
+
+.recent-item.pending {
+  border-left: none;
+}
+
+.recent-item.late {
+  border-left: none;
+}
+
+.assignment-name {
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.status-badge {
+  font-weight: 600;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.status-badge.completed {
+  background: #4CAF50;
+  color: white;
+}
+
+.status-badge.pending {
+  background: #ff9800;
+  color: white;
+}
+
+.status-badge.late {
+  background: #f44336;
+  color: white;
+}
+
+.date {
+  color: #aaa;
+  font-size: 12px;
+} 
+
+
+.assignments-list.compact {
+  gap: 10px;
+}
+
+.assignments-list.compact .assignment-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: none;
+}
+
+.assignments-list.compact .assignment-header {
+  margin-bottom: 6px;
+}
+
+.assignments-list.compact .assignment-title {
+  font-size: 14px;
+}
+
+.assignments-list.compact .assignment-details {
+  font-size: 12px;
+}
+
+.assignments-list.compact .status {
+  font-size: 10px;
+  padding: 2px 8px;
+}
+
+.recent-assignments.compact {
+  gap: 8px;
+}
+
+.recent-assignments.compact .recent-item {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: none;
+}
+
+.recent-assignments.compact .assignment-name {
+  font-size: 13px;
+}
+
+.recent-assignments.compact .status-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+}
+
+.recent-assignments.compact .date {
+  font-size: 11px;
+} 
+
+
+.section-card:has(.recent-assignments) {
+  max-height: 300px;
+  overflow-y: auto;
 } 
